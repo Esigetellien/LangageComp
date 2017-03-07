@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1488737717 source:e:\bureau\cours l3\language et compilation\lec\main.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
+1488737717 e:\bureau\cours l3\language et compilation\lec\language.h
+	<vector>
+
