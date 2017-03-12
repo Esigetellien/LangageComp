@@ -2,6 +2,8 @@
 #define LANGUAGE_H_INCLUDED
 
 #include <vector>
+#include <stdlib.h>
+#include <stdio.h>
 
 class Langage
 {
@@ -14,9 +16,10 @@ class Langage
         void recupTerminal();
         void recupSRecursivite();
         void afficherGrammaireSRecursivite();
-
+        //void DeterminerNbRegles();
     private:
 
+        int term;//nombre d'etats terminaux
         std::vector<char> etats;
         std::vector<bool> terminaux;
         std::vector<std::vector<char> > imports;
@@ -27,6 +30,8 @@ class Langage
         std::vector<std::vector<char> > suivants;
         std::vector<std::vector<char> > tAnalyse;
         std::vector<char> reglesAnalyse;
+        //std::vector<char> nbReglesC;
+        //std::vector<int> nbReglesI;
 }                                                                                                                                                    ;
 
 

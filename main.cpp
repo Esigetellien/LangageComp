@@ -9,19 +9,48 @@ using namespace std;
 int main()
 {
 
-    Langage premier;
+    /*int choix = 0;
+    do
+    {
+        system("CLS");
+        cout<<"==== Projet de Langage et Compilation ====\n"<<endl;
+        cout<<"       ==== Analyseur Ascendant ===\n"<<endl;
 
-    premier.afficherGrammaire();
+        // Faire une saisie securisee
+        cout<<"\n\n1.Charger un fichier.txt\n2.Lancer l'analyse descendante\n3.Quitter\n\n"<<endl;
+        cout<<"Votre choix: ";
+        cin>>choix;
+        ///////////////////////////////////////////////
+        switch(choix)
+        {
+            case 1:
+            {
+            }break;
 
-    premier.recupEtats();
+            case 2:
+            {
+              system("PAUSE");
+            }break;
 
-    premier.recupTerminal();
+            case 3:
+            {
+                cout<<"\n\n\n\nDeveloppé par Duhamel Bertrand, Gouessant Claire, Laversanne Vincent, Zuber Thibault"<<endl;
+            }
+            default:
+            {
+                cout<<"Erreur !!!!!"<<endl;
+            }break;
+        }*/
 
-    premier.afficherEtatsEtTerminaux();
+        Langage premier;
+        premier.afficherGrammaire();
+        premier.recupEtats();
+        premier.recupTerminal();
+        premier.afficherEtatsEtTerminaux();
+      /*  //premier.Creation();
+       system("PAUSE");
 
-    premier.recupSRecursivite();
-
-    premier.afficherGrammaireSRecursivite();
-
+    }while(choix != 3);
+    cout<<"\n\nDevelopper par Duhamel Bertrand, Gouessant Claire, Laversanne Vincent, Zuber Thibault"<<endl;*/
     return 0;
 }

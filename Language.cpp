@@ -101,5 +101,28 @@ void Langage::afficherEtatsEtTerminaux()
         cout << " " << etats[i] << "     " << terminaux[i] << endl;
     }
     cout <<  endl;
+
+      cout<<"\n\n==== Caracteristiques des etats ===\n"<<endl;
+    cout << "\nLes etats  terminaux sont: ";
+    for (unsigned int i=0; i<etats.size(); i++)
+    {
+        if( terminaux[i]== 1)
+        {
+            cout <<"  "<<etats[i] <<" ";
+        }
+    }
+    cout <<endl;
+
+     cout << "\nLes etats  non terminaux sont: ";
+    for (unsigned int i=0; i<etats.size(); i++)
+    {
+        if( terminaux[i]!= 1)
+        {
+            cout <<"  "<<etats[i] <<" ";
+            term++;
+
+        }
+    }
+    cout <<endl;
 }
 

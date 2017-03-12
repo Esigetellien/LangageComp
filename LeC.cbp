@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ClaireSRecursivite.cpp" />
 		<Unit filename="Language.cpp" />
 		<Unit filename="Language.h" />
 		<Unit filename="main.cpp" />

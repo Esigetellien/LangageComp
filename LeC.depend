@@ -25,3 +25,18 @@
 	<vector>
 	"Language.h"
 
+1489349121 source:c:\users\vince\desktop\langagecomp\clairesrecursivite.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
+1489352463 c:\users\vince\desktop\langagecomp\language.h
+	<vector>
+	<stdlib.h>
+	<stdio.h>
+
+1489352327 source:c:\users\vince\desktop\langagecomp\language.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
