@@ -47,6 +47,9 @@ int main()
         premier.recupEtats();
         premier.recupTerminal();
         premier.afficherEtatsEtTerminaux();
+        premier.recupSRecursivite();
+        premier.afficherGrammaireSRecursivite();
+        premier.afficherEtatsEtTerminaux();
       /*  //premier.Creation();
        system("PAUSE");
 

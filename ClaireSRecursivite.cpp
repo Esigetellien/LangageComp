@@ -27,11 +27,16 @@ void Langage::recupSRecursivite()
     sRecursivite[3][3]='l';
     sRecursivite[4][0]='l';
     sRecursivite[4][1]='#';
+
+    etats.push_back('l');
+    etats.push_back('#');
+    terminaux.push_back(false);
+    terminaux.push_back(true);
 }
 
 void Langage::afficherGrammaireSRecursivite()
 {
-    cout << "Gramaire sans recursivite" << endl;
+    cout << "\n\nGramaire sans recursivite" << endl;
     for (unsigned int x=0; x<sRecursivite.size(); x++)
     {
         cout << " " << sRecursivite[x][0] << " ->";;
