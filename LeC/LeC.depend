@@ -7,3 +7,21 @@
 1488737717 e:\bureau\cours l3\language et compilation\lec\language.h
 	<vector>
 
+1489343923 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\lec\language.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
+1489344031 d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\lec\language.h
+	<vector>
+
+1489344090 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\lec\main.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
+1489343923 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\lec\clairesrecursivite.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+

@@ -19,7 +19,9 @@ int main()
 
     premier.afficherEtatsEtTerminaux();
 
+    premier.recupSRecursivite();
 
+    premier.afficherGrammaireSRecursivite();
 
     return 0;
 }

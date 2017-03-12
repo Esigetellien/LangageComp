@@ -11,8 +11,8 @@ Langage::Langage()
     imports.push_back(vector<char>(2));
     imports.push_back(vector<char>(4));
     imports.push_back(vector<char>(2));
-    imports.push_back(vector<char>(4));
-    imports.push_back(vector<char>(4));
+    /*imports.push_back(vector<char>(4));
+    imports.push_back(vector<char>(4));*/
     imports[0][0]='S';
     imports[0][1]='(';
     imports[0][2]='L';
@@ -27,14 +27,14 @@ Langage::Langage()
     imports[3][1]='S';
 
 
-    imports[4][0]='E';
+    /*imports[4][0]='E';
     imports[4][1]='L';
     imports[4][2]=',';
     imports[4][3]='S';
     imports[5][0]='E';
     imports[5][1]='[';
     imports[5][2]='b';
-    imports[5][3]=']';
+    imports[5][3]=']';*/
 
 }
 
