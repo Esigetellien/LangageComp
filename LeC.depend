@@ -40,22 +40,23 @@
 	<vector>
 	"Language.h"
 
-1489323884 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\clairesrecursivite.cpp
+1490370521 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\clairesrecursivite.cpp
 	<iostream>
 	<vector>
+	<time.h>
 	"Language.h"
 
-1489323884 d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\language.h
+1490363220 d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\language.h
 	<vector>
 	<stdlib.h>
 	<stdio.h>
 
-1489323884 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\language.cpp
+1490370624 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\language.cpp
 	<iostream>
 	<vector>
 	"Language.h"
 
-1489362091 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\main.cpp
+1489333506 source:d:\_claire2_\algo_prog\langage_et_compilation\langagecomp-master\main.cpp
 	<iostream>
 	<vector>
 	"Language.h"

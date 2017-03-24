@@ -16,6 +16,7 @@ class Langage
         void recupTerminal();
         void recupSRecursivite();
         void afficherGrammaireSRecursivite();
+        char trouverEtatLibre();
         //void DeterminerNbRegles();
     private:
 
