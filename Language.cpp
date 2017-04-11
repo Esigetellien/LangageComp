@@ -1,41 +1,47 @@
 #include <iostream>
-#include <vector>
 #include "Language.h"
 
 using namespace std;
 
 Langage::Langage()
 {
-    // Tableau "importé" codé directement pour les tests. Exercice 1, analyseurs LL(1)
-    imports.push_back(vector<char>(4));
-    imports.push_back(vector<char>(2));
-    imports.push_back(vector<char>(4));
-    imports.push_back(vector<char>(2));
-    /*imports.push_back(vector<char>(4));
-    imports.push_back(vector<char>(4));*/
-    imports[0][0]='S';
-    imports[0][1]='(';
-    imports[0][2]='L';
-    imports[0][3]=')';
-    imports[1][0]='S';
-    imports[1][1]='a';
-    imports[2][0]='L';
-    imports[2][1]='L';
-    imports[2][2]=',';
-    imports[2][3]='S';
-    imports[3][0]='L';
-    imports[3][1]='S';
+    ifstream fichier("TestPerso1.txt", ios::in);
 
+    if(fichier)  // si l'ouverture a réussi
+    {
+        fichier >> term;
+        for (int i=0; i<term; i++)
+        {
+            imports.push_back(vector<char>(1)); // Rajout d'une ligne par état
 
-    /*imports[4][0]='E';
-    imports[4][1]='L';
-    imports[4][2]=',';
-    imports[4][3]='S';
-    imports[5][0]='E';
-    imports[5][1]='[';
-    imports[5][2]='b';
-    imports[5][3]=']';*/
+            char etat; // Le premier terme de la ligne qui devrait etre l'etat
+            string droite; // Ce qui se trouve a droite de l'etat
 
+            fichier >> etat;
+            imports[i][0]=etat; // Mise de l'etat au debut de la ligne du tableau d'import
+            etats.push_back(etat);
+
+            fichier >> droite;
+            for (int unsigned y=0; y<droite.size(); y++) // Pour chaque symbole a droite, rajout d'une case et du symbole dans le tableau imports[][]
+            {
+                char symb=droite[y];
+                if (symb=='|')    // detection si l'etat a plusieurs parties a droite par le symbole | dan sle fichier
+                {
+                    term++; i++;
+                    imports.push_back(vector<char>(1));
+                    imports[i][0]=etat;
+                }
+                else
+                {
+                    imports[i].push_back(symb);
+                }
+            }
+        }
+    }
+    else
+    {
+        cout << " Erreur lors de l'ouverture du fichier, verifier que le fichier existe" << endl;
+    }
 }
 
 void Langage::recupTerminal()
@@ -56,10 +62,9 @@ void Langage::recupTerminal()
     }
 }
 
-void Langage::recupEtats() // ceci sera a refaire des que l'importation des fichiers de grammaire sera complétement fini
+void Langage::recupEtats() // ...
 {
-    etats.push_back(imports[0][0]);
-    for (unsigned int x=0; x<imports.size(); x++) // les ints sont en unsigned simplement pour éviter un warning avec la comparaison de vector<>::size()
+    for (unsigned int x=0; x<imports.size(); x++)
     {
         for (unsigned int y=0; y<imports[x].size(); y++)
         {

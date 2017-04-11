@@ -61,3 +61,24 @@
 	<vector>
 	"Language.h"
 
+1490609832 source:e:\bureau\langagecomp\clairesrecursivite.cpp
+	<iostream>
+	<vector>
+	<time.h>
+	"Language.h"
+
+1491919839 e:\bureau\langagecomp\language.h
+	<fstream>
+	<vector>
+	<stdlib.h>
+	<stdio.h>
+
+1491921274 source:e:\bureau\langagecomp\main.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
+1491922469 source:e:\bureau\langagecomp\language.cpp
+	<iostream>
+	"Language.h"
+

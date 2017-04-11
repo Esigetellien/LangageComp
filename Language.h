@@ -1,6 +1,7 @@
 #ifndef LANGUAGE_H_INCLUDED
 #define LANGUAGE_H_INCLUDED
 
+#include <fstream>
 #include <vector>
 #include <stdlib.h>
 #include <stdio.h>
