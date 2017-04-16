@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <time.h>
 #include "Language.h"
 
 using namespace std;

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include "Language.h"
 
 
@@ -50,6 +49,8 @@ int main()
         premier.recupSRecursivite();
         premier.afficherGrammaireSRecursivite();
         premier.afficherEtatsEtTerminaux();
+        premier.PremiersSuivants();
+        premier.AffichagePremiers();
       /*  //premier.Creation();
        system("PAUSE");
 

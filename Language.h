@@ -1,8 +1,10 @@
 #ifndef LANGUAGE_H_INCLUDED
 #define LANGUAGE_H_INCLUDED
 
-#include <fstream>
+#include <iostream>
 #include <vector>
+#include <time.h>
+#include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -18,6 +20,10 @@ class Langage
         void recupSRecursivite();
         void afficherGrammaireSRecursivite();
         char trouverEtatLibre();
+        void PremiersSuivants();
+        void Premiers(int a, char IndiceEtats);
+         void AffichagePremiers();
+          bool EstTerminal(char monEtat);
         //void DeterminerNbRegles();
     private:
 
