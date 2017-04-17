@@ -51,7 +51,6 @@ int main()
     premier.afficherEtatsEtTerminaux();
     premier.PremiersSuivants();
     premier.AffichagePremiers();
-    premier.AffichageSuivants();
     /*  //premier.Creation();
      system("PAUSE");
 

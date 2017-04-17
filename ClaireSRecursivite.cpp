@@ -89,12 +89,13 @@ void Langage::recupSRecursivite()//ne fonctionne que pour la récursivité directe
                     indicateur = true;
 
                     //Créer un nouvel état
-                    char nouvEtat = trouverEtatLibre();
+                    char nouvEtat = trouverEtatLibre(imports[j][0]);
                     etats.push_back(nouvEtat);
                     terminaux.push_back(false);
                     sRecursivite.push_back(vector<char>(2));
                     sRecursivite[sRecursivite.size()-1][0] = nouvEtat;
                     sRecursivite[sRecursivite.size()-1][1] = '#';
+
 
                     //sRecursivité[sRecursivite.size()].push_back('#');
 
@@ -111,7 +112,7 @@ void Langage::recupSRecursivite()//ne fonctionne que pour la récursivité directe
                     //Trouver les lignes commencant par l'état étudié
                     for(unsigned k=0; k<imports.size(); k++)
                     {
-                        if(imports[j][0]==etats[i])
+                        if(imports[k][0]==etats[i])
                         {
                             //Si la ligne est récursive
                             if(imports[k][0] == imports[k][1])
@@ -172,7 +173,7 @@ char Langage::trouverEtatLibre()
     while(continuer)
     {
         srand(time(NULL));
-        lettre = (char) (rand()%26) + 'A';
+        lettre = (char) (rand()%26) + 'a';
         continuer = false;
         for(unsigned i=0; i<etats.size(); i++)
         {
@@ -186,6 +187,36 @@ char Langage::trouverEtatLibre()
     return lettre;
 }
 
+char Langage::trouverEtatLibre(char ancLettre)
+{
+    char nouvLettre = ancLettre - 'A' + 'a';
+    bool continuer = false;
+
+    for(unsigned i=0; i<etats.size(); i++)
+    {
+        if(etats[i] == nouvLettre)
+        {
+            continuer = true;
+            i = etats.size();
+        }
+    }
+
+    while(continuer)
+    {
+        srand(time(NULL));
+        nouvLettre = (char) (rand()%26) + 'a';
+        continuer = false;
+        for(unsigned i=0; i<etats.size(); i++)
+        {
+            if(etats[i] == nouvLettre)
+            {
+                continuer = true;
+                i = etats.size();
+            }
+        }
+    }
+    return nouvLettre;
+}
 
 void Langage::afficherGrammaireSRecursivite()
 {

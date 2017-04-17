@@ -20,12 +20,11 @@ public:
     void recupSRecursivite();
     void afficherGrammaireSRecursivite();
     char trouverEtatLibre();
+    char trouverEtatLibre(char ancLettre);
     void PremiersSuivants();
     void Premiers(int a, char IndiceEtats);
     void AffichagePremiers();
     bool EstTerminal(char monEtat);
-    void Suivants(int b, char IndiceEtats);
-    void AffichageSuivants();
     //void DeterminerNbRegles();
 private:
 
