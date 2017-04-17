@@ -97,12 +97,9 @@ using namespace std;
 
    void Langage::Suivants(int b, char IndiceEtats)
    {
-        char StartSymb = etats[0];
-        cout<<"Start Symbole est "<< StartSymb<<endl;
         bool monEtat=false;
         bool present =false;
         bool VidePresent =false;
-        bool StartSymbPresent = false;
         bool present2=false;
         bool testFin=false;
        vector <char> DejaTraite2;
@@ -189,7 +186,7 @@ using namespace std;
                                     {
                                         Suivants(b,sRecursivite[i][j+1]);
                                     }
-                                        cout<<"Deja Traite, valeur: "<<IndiceEtats<<endl;
+                                    cout<<"Deja Traite, valeur: "<<IndiceEtats<<endl;
                                        for(unsigned int i=0;i<DejaTraite2.size(); i++)
                                         {
                                             cout<<" "<<DejaTraite2[i];
@@ -233,4 +230,3 @@ using namespace std;
             cout<<endl;
         }
     }
-

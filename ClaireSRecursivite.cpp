@@ -2,6 +2,37 @@
 
 using namespace std;
 
+/*void Langage::recupSRecursivite()
+{
+    // Tableau "sRecursivite" codé directement pour les tests.
+    sRecursivite.push_back(vector<char>(4));
+    sRecursivite.push_back(vector<char>(2));
+    sRecursivite.push_back(vector<char>(3));
+    sRecursivite.push_back(vector<char>(4));
+    sRecursivite.push_back(vector<char>(2));
+    sRecursivite[0][0]='S';
+    sRecursivite[0][1]='(';
+    sRecursivite[0][2]='L';
+    sRecursivite[0][3]=')';
+    sRecursivite[1][0]='S';
+    sRecursivite[1][1]='a';
+    sRecursivite[2][0]='L';
+    sRecursivite[2][1]='S';
+    sRecursivite[2][2]='l';
+    sRecursivite[3][0]='l';
+    sRecursivite[3][1]=',';
+    sRecursivite[3][2]='S';
+    sRecursivite[3][3]='l';
+    sRecursivite[4][0]='l';
+    sRecursivite[4][1]='#';
+
+    etats.push_back('l');
+    etats.push_back('#');
+    terminaux.push_back(false);
+    terminaux.push_back(true);
+}*/
+
+
 /*void Langage::recupSRecursivite()///ne fonctionne que pour la récursivité directe
 {
     //Parcourir tout le vecteur imports
@@ -142,7 +173,6 @@ char Langage::trouverEtatLibre()
     {
         srand(time(NULL));
         lettre = (char) (rand()%26) + 'A';
-     //  lettre = (char) (rand()%26) + 'A';
         continuer = false;
         for(unsigned i=0; i<etats.size(); i++)
         {

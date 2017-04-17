@@ -5,7 +5,7 @@ using namespace std;
 
 Langage::Langage()
 {
-    ifstream fichier("TestPerso1.txt",ios::in);
+    ifstream fichier("TestPerso1.txt", ios::in);
 
     if(fichier)  // si l'ouverture a réussi
     {
@@ -27,7 +27,8 @@ Langage::Langage()
                 char symb=droite[y];
                 if (symb=='|')    // detection si l'etat a plusieurs parties a droite par le symbole | dan sle fichier
                 {
-                    term++; i++;
+                    term++;
+                    i++;
                     imports.push_back(vector<char>(1));
                     imports[i][0]=etat;
                 }
@@ -56,7 +57,7 @@ void Langage::recupTerminal()
         {
             if (etats[x]==imports[y][0])
             {
-                    terminaux[x] = false;
+                terminaux[x] = false;
             }
         }
     }
@@ -91,8 +92,14 @@ void Langage::afficherGrammaire()
         for (unsigned int y=0; y<imports[x].size(); y++)
         {
             cout << " " << imports[x][y];
-            if (y==0){cout << " -> ";}
-            if (y==imports[x].size()-1){cout << endl;}
+            if (y==0)
+            {
+                cout << " -> ";
+            }
+            if (y==imports[x].size()-1)
+            {
+                cout << endl;
+            }
         }
     }
     cout << endl;
@@ -107,7 +114,7 @@ void Langage::afficherEtatsEtTerminaux()
     }
     cout <<  endl;
 
-      cout<<"\n\n==== Caracteristiques des etats ===\n"<<endl;
+    cout<<"\n\n==== Caracteristiques des etats ===\n"<<endl;
     cout << "\nLes etats  terminaux sont: ";
     for (unsigned int i=0; i<etats.size(); i++)
     {
@@ -118,7 +125,7 @@ void Langage::afficherEtatsEtTerminaux()
     }
     cout <<endl;
 
-     cout << "\nLes etats  non terminaux sont: ";
+    cout << "\nLes etats  non terminaux sont: ";
     for (unsigned int i=0; i<etats.size(); i++)
     {
         if( terminaux[i]!= 1)
