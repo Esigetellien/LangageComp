@@ -8,6 +8,8 @@ using namespace std;
 int main()
 {
 
+   // char MonF[] ="TestPerso1.txt";
+
     /*int choix = 0;
     do
     {
@@ -51,6 +53,7 @@ int main()
         premier.afficherEtatsEtTerminaux();
         premier.PremiersSuivants();
         premier.AffichagePremiers();
+        premier.AffichageSuivants();
       /*  //premier.Creation();
        system("PAUSE");
 

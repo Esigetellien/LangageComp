@@ -22,8 +22,10 @@ class Langage
         char trouverEtatLibre();
         void PremiersSuivants();
         void Premiers(int a, char IndiceEtats);
-         void AffichagePremiers();
-          bool EstTerminal(char monEtat);
+        void AffichagePremiers();
+        bool EstTerminal(char monEtat);
+        void Suivants(int a, char IndiceEtats);
+        void AffichageSuivants();
         //void DeterminerNbRegles();
     private:
 

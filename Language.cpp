@@ -5,7 +5,7 @@ using namespace std;
 
 Langage::Langage()
 {
-    ifstream fichier("TestPerso1.txt", ios::in);
+    ifstream fichier("TestPerso1.txt",ios::in);
 
     if(fichier)  // si l'ouverture a réussi
     {
