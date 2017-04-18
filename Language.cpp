@@ -3,11 +3,11 @@
 
 using namespace std;
 
-Langage::Langage()
+Langage::Langage(string menu)
 {
-    ifstream fichier("TestPerso1.txt", ios::in);
+    ifstream fichier (menu, ios::in);
 
-    if(fichier)  // si l'ouverture a réussi
+    if (fichier)
     {
         fichier >> term;
         for (int i=0; i<term; i++)
@@ -41,8 +41,15 @@ Langage::Langage()
     }
     else
     {
-        cout << " Erreur lors de l'ouverture du fichier, verifier que le fichier existe" << endl;
+        cout << " Erreur lors de l'ouverture du fichier, fermeture du programme" << endl;
+        exit(EXIT_FAILURE);
     }
+    fichier.close();
+}
+
+Langage::~Langage()
+{
+
 }
 
 void Langage::recupTerminal()
@@ -107,13 +114,6 @@ void Langage::afficherGrammaire()
 
 void Langage::afficherEtatsEtTerminaux()
 {
-    cout << "etat  terminal" << endl;
-    for (unsigned int i=0; i<etats.size(); i++)
-    {
-        cout << " " << etats[i] << "     " << terminaux[i] << endl;
-    }
-    cout <<  endl;
-
     cout<<"\n\n==== Caracteristiques des etats ===\n"<<endl;
     cout << "\nLes etats  terminaux sont: ";
     for (unsigned int i=0; i<etats.size(); i++)

@@ -12,7 +12,8 @@ class Langage
 {
 public:
 
-    Langage();
+    Langage(std::string menu);
+    ~Langage();
     void afficherGrammaire();
     void afficherEtatsEtTerminaux();
     void recupEtats();
