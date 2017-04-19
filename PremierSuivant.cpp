@@ -28,6 +28,7 @@ void Langage::PremiersSuivants()
     int a = 0;
     int b =0;
     vector <char> DejaTraite;
+    vector <char> DejaTraite2;
     for( unsigned int i=0; i<etats.size(); i++ )
     {
         if(terminaux[i]== 0)
@@ -45,7 +46,11 @@ void Langage::PremiersSuivants()
            {
                suivants.push_back(vector<char>());
                suivants[b].push_back(etats[i]);
-              Suivants(b, etats[i], DejaTraite);// Appel de la fonction premier qui va donner la liste des premiers de l'etat[i] non terminaux
+              Suivants(b, etats[i], DejaTraite2);// Appel de la fonction premier qui va donner la liste des premiers de l'etat[i] non terminaux
+              for(int k=0;k<DejaTraite2.size();k++)
+              {
+                  DejaTraite2[k]='0';
+              }
                b++;
            }
         }
@@ -135,7 +140,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                     //Les tab[i][j+1]correspond au caractere follow du de l'Etat Actuel: tab[i][j]=etats[i]
                       if(j+1>sRecursivite[i].size()-1) // Test pour verifier que ce n'est pas le dernier caractere de la ligne, si c'est le cas, affecter le mot vide dans les follozs
                       {
-                         /*for(unsigned int k=0; k<DejaTraite2.size(); k++)
+                         for(unsigned int k=0; k<DejaTraite2.size(); k++)
                                     {
                                         if(sRecursivite[i][0]==DejaTraite2[k])
                                         {
@@ -147,7 +152,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                                          DejaTraite2.push_back(sRecursivite[i][0]);
 
                                          Suivants(b,sRecursivite[i][0],DejaTraite2);
-                                    }*/
+                                    }
                       }
 
                       else
@@ -208,7 +213,6 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                                     {
                                          if(testFollow==true)
                                          {
-                                             cout<<"Follow "<<endl;
                                             Suivants(b,sRecursivite[i][j+1], DejaTraite2);
                                          }
                                     }
