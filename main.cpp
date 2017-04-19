@@ -66,7 +66,7 @@ string saisieFichier()
         }
     }
     cout << " L'analyse va etre lance sur ce fichier" << endl;
-    system("PAUSE");
+   // system("PAUSE");
     return menu;
 }
 
@@ -114,13 +114,14 @@ int main()
         premier.recupEtats();
         premier.recupTerminal();
         premier.afficherEtatsEtTerminaux();
-        system("PAUSE");
+       // system("PAUSE");
         premier.recupSRecursivite();
         premier.afficherGrammaireSRecursivite();
         premier.afficherEtatsEtTerminaux();
-        system("PAUSE");
+        //system("PAUSE");
         premier.PremiersSuivants();
         premier.AffichagePremiers();
+        premier.AffichageSuivants();
         system("PAUSE");
     }
 
