@@ -26,23 +26,25 @@ bool Langage:: EstTerminal(char monEtat)
 void Langage::PremiersSuivants()
 {
     int a = 0;
+    vector <char> DejaTraite;
     for( unsigned int i=0; i<etats.size(); i++ )
     {
         if(terminaux[i]== 0)
         {
             premiers.push_back(vector<char>());
             premiers[a].push_back(etats[i]);
-            Premiers(a, etats[i]);
+            Premiers(a, etats[i],DejaTraite);
             a++;
         }
     }
 }
-void Langage::Premiers(int a,char IndiceEtats)
+void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
 {
+
     bool monEtat=false;
-    vector <char> DejaTraite;
     bool testFin = false;
     bool present =false;
+    DejaTraite.push_back(IndiceEtats);
     for(unsigned int i=0; i<sRecursivite.size(); i++)
     {
         //  cout<<"taille: "<<sRecursivite.size()<<endl;
@@ -67,9 +69,11 @@ void Langage::Premiers(int a,char IndiceEtats)
             }
             else
             {
-                DejaTraite.push_back(IndiceEtats);
+                do
+                {
                 for(unsigned int k=0; k<DejaTraite.size(); k++)
                 {
+
                     if(sRecursivite[i][1]==DejaTraite[k])
                     {
                         testFin= true;
@@ -77,12 +81,22 @@ void Langage::Premiers(int a,char IndiceEtats)
                 }
                 if(testFin == false)
                 {
-                    Premiers(a,sRecursivite[i][1]);
+                    DejaTraite.push_back(sRecursivite[i][1]);
+                    cout<<"test"<<endl;
+                   Premiers(a,sRecursivite[i][1],DejaTraite);
+
                 }
 
+            }while(testFin==false);
             }
         }
 
+          for(unsigned int k=0; k<DejaTraite.size(); k++)
+                {
+                    cout<<"" <<DejaTraite[k]<<" ";
+                }
+
+            cout<<endl;
     }
 
 }

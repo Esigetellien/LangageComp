@@ -48,7 +48,7 @@ string saisieFichier()
         {
             cout << " Veuillez entrer le nom du fichier (ne pas oublier l'extension .txt)" << endl;
             cin  >> menu;
-            ifstream fichier (menu, ios::in);
+            ifstream fichier (menu.c_str(), ios::in);
             if (fichier)
             {
                 verif = true;

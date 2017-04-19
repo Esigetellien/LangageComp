@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Language.h"
-
+#include <fstream>
 using namespace std;
 
 Langage::Langage(string menu)
 {
-    ifstream fichier (menu, ios::in);
+    ifstream fichier (menu.c_str(), ios::in);
 
     if (fichier)
     {
