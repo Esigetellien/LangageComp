@@ -54,10 +54,16 @@ string saisieFichier()
                 verif = true;
                 fichier.close();
             }
+
             else
             {
                 cout << " Erreur de saisie, le fichier specifie n'existe pas" << endl;
             }
+        }
+         else if (menu == "6")
+        {
+            menu = "fichierTestFollows.txt";
+            verif = true;
         }
         else if (menu == "0")
         {

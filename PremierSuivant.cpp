@@ -46,10 +46,11 @@ void Langage::PremiersSuivants()
            {
                suivants.push_back(vector<char>());
                suivants[b].push_back(etats[i]);
+               DejaTraite2.push_back(etats[i]);
               Suivants(b, etats[i], DejaTraite2);// Appel de la fonction premier qui va donner la liste des premiers de l'etat[i] non terminaux
               for(int k=0;k<DejaTraite2.size();k++)
               {
-                  DejaTraite2[k]='0';
+                  DejaTraite2.pop_back();
               }
                b++;
            }
@@ -125,7 +126,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
         bool present2=false;
         bool testFin=false;
         bool testFollow=false;
-        DejaTraite2.push_back(IndiceEtats);
+       // DejaTraite2.push_back(IndiceEtats);
         if(IndiceEtats == etats[0])// Si c'est le premier etat, alors dans les follows, il possede le startSymbol
         {
               suivants[b].push_back('$');
@@ -149,7 +150,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                                     }
                                     if(VidePresent == false)
                                     {
-                                         DejaTraite2.push_back(sRecursivite[i][0]);
+                                         DejaTraite2.push_back(sRecursivite[i][j]);
 
                                          Suivants(b,sRecursivite[i][0],DejaTraite2);
                                     }
