@@ -48,7 +48,7 @@ void Langage::PremiersSuivants()
                suivants[b].push_back(etats[i]);
                DejaTraite2.push_back(etats[i]);
               Suivants(b, etats[i], DejaTraite2);// Appel de la fonction premier qui va donner la liste des premiers de l'etat[i] non terminaux
-              for(int k=0;k<DejaTraite2.size();k++)
+              for(int k=0;k<(int)DejaTraite2.size();k++)
               {
                   DejaTraite2.pop_back();
               }

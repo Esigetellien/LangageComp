@@ -7,6 +7,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
+#include <stack>
 
 class Langage
 {
@@ -35,6 +36,9 @@ public:
     void testSuivants(int i, int j, int k);
     void affichageTableA();
     //void DeterminerNbRegles();
+    void empiler(std::string saisie);
+    bool analyser();
+
 private:
 
     int term;//nombre d'etats terminaux
@@ -51,7 +55,10 @@ private:
     std::vector<std::vector<char> > analyse;
     //std::vector<char> nbReglesC;
     //std::vector<int> nbReglesI;
-}                                                                                                                                                    ;
-
+    std::stack<char> phrase;
+    std::stack<char> sortie;
+}
+                                                                                                                                                  ;
+std::string saisir();
 
 #endif // LANGUAGE_H_INCLUDED

@@ -69,3 +69,33 @@
 1492679138 source:c:\users\vincent\desktop\langagecomp\langagecomp\analyse.cpp
 	"Language.h"
 
+1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\clairesrecursivite.cpp
+	"Language.h"
+
+1492688698 d:\_claire2_\l3\ad\detection\langagecomp-master\language.h
+	<iostream>
+	<vector>
+	<time.h>
+	<fstream>
+	<stdlib.h>
+	<stdio.h>
+	<stack>
+
+1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\language.cpp
+	<iostream>
+	"Language.h"
+	<fstream>
+
+1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\main.cpp
+	<iostream>
+	"Language.h"
+
+1492686602 source:d:\_claire2_\l3\ad\detection\langagecomp-master\premiersuivant.cpp
+	"Language.h"
+
+1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\analyse.cpp
+	"Language.h"
+
+1492686569 source:d:\_claire2_\l3\ad\detection\langagecomp-master\clairereconnaissance.cpp
+	"Language.h"
+
