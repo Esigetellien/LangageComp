@@ -58,7 +58,7 @@ void Langage::testPremiers(int i, int j, int k)
   monEtat= EstTerminal(sRecursivite[k][1]);
   if(monEtat==true&&sRecursivite[k][1]==analyse[0][j])//Si le premier caractere de la regle est celui recherche
   {
-    analyse[i][j]=k;
+    analyse[i][j]=k+1;//Attention la valeur devait etre k, mais conflit avec la fonction d'affichage pour recurperer la regle merci de mettre analyse[i][j]-1
   }
 
   else
@@ -69,7 +69,7 @@ void Langage::testPremiers(int i, int j, int k)
           {
               if(premiers[p][0]== sRecursivite[k][1] &&analyse[0][j]==premiers[p][e])
               {
-                  analyse[i][j]=k;
+                  analyse[i][j]=k+1;//Attention la valeur devait etre k, mais conflit avec la fonction d'affichage pour recurperer la regle merci de mettre analyse[i][j]-1
               }
           }
       }
@@ -79,6 +79,33 @@ void Langage::testPremiers(int i, int j, int k)
 
 void Langage::testSuivants(int i, int j, int k)
 {
+   // bool presenceMotVide=false;
+    //Test du mot vide dans les differentes regles d un meme etat
+   /* for(unsigned int f=0;f<premiers.size();f++)
+    {
+        for(unsigned int g=1; g<premiers[f].size();g++)
+        {
+            if(analyse[i][0]==premiers[f][0]&&premiers[f][g]=='#')
+            {
+                presenceMotVide=true;
+            }
+        }
+    }*/
+
+    //if(presenceMotVide==true)
+    if(sRecursivite[k][1]=='#')
+    {
+        for (unsigned int h=0; h<suivants.size();h++)
+        {
+            for (unsigned int t=1; t<suivants[h].size();t++)
+            {
+             if(analyse[i][0]==suivants[h][0]&& analyse[0][j]==suivants[h][t])//Recherche du symbole dans les follows de l'etat
+             {
+                 analyse[i][j]=k+1;//Attention la valeur devait etre k, mais conflit avec la fonction d'affichage pour recurperer la regle merci de mettre analyse[i][j]-1
+             }
+            }
+        }
+    }
 
 }
 
