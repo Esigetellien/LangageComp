@@ -76,6 +76,12 @@ void Langage::testPremiers(int i, int j, int k)
   }
 
 }
+
+void Langage::testSuivants(int i, int j, int k)
+{
+
+}
+
 void Langage::Analyse()
 {
     AnalyseInit();
@@ -90,6 +96,7 @@ void Langage::Analyse()
                   if(analyse[i][0]==sRecursivite[k][0])
                   {
                       testPremiers(i,j,k);
+                      testSuivants(i,j,k);
                   }
 
             }

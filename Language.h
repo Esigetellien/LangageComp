@@ -32,7 +32,7 @@ public:
     void AnalyseInit();
     void Analyse();
     void testPremiers(int i, int j, int k);
-    void Langage::testSuivants(int i, int j, int k)
+    void testSuivants(int i, int j, int k);
     void affichageTableA();
     //void DeterminerNbRegles();
 private:
