@@ -27,6 +27,7 @@ public:
     void AffichagePremiers();
     bool EstTerminal(char monEtat);
     void Suivants(int b, char IndiceEtats, std::vector<char>DejaTraite2);
+    void SuivantsR2(int b,int i, int j, char IndiceEtats, std::vector<char>DejaTraite2);
     void AffichageSuivants();
 
     void AnalyseInit();

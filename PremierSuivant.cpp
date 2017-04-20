@@ -48,7 +48,7 @@ void Langage::PremiersSuivants()
                suivants[b].push_back(etats[i]);
                DejaTraite2.push_back(etats[i]);
               Suivants(b, etats[i], DejaTraite2);// Appel de la fonction premier qui va donner la liste des premiers de l'etat[i] non terminaux
-              for(int k=0;k<DejaTraite2.size();k++)
+              for(unsigned int k=0;k<DejaTraite2.size();k++)
               {
                   DejaTraite2.pop_back();
               }
@@ -118,7 +118,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
 
 }
 
- void Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme chose que premiers
+ /*void Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme chose que premiers
    {
         bool monEtat=false;
         bool present =false;
@@ -236,7 +236,80 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
             }
         }
 
-    }
+    }*/
+
+void Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme chose que premiers
+   {
+       bool MonEtat=true;
+      //Premiere Regle du follow
+        if(IndiceEtats == etats[0])// Si c'est le premier etat, alors dans les follows, il possede le startSymbol
+        {
+              suivants[b].push_back('$');
+        }
+        for(unsigned int i=0;i<sRecursivite.size();i++)
+       {
+             for(unsigned int j=1;j<sRecursivite[j].size();j++)
+             {
+
+                 if(sRecursivite[i][j]==IndiceEtats && j+1<sRecursivite[i].size())
+                 {
+                     MonEtat=EstTerminal(sRecursivite[i][j+1]);
+                     //Cas Follow Terminal
+                     if(MonEtat==true&&sRecursivite[i][j+1]!='#')
+                     {
+                         //Verifier qu'il n'est pas deja present dans le tab suivants
+                         suivants[b].push_back(sRecursivite[i][j+1]);
+                     }
+                     //Cas Follow non terminal
+                     else
+                     {
+                         SuivantsR2(b,i,j,IndiceEtats,DejaTraite2);
+                    }
+                 }
+
+                else if(sRecursivite[i][j]==IndiceEtats&&j+1>sRecursivite[i].size())
+                {
+                    //Cas ou on effectuera un follow de sRecurvite[i][0]
+                }
+
+             }
+       }
+   }
+   void Langage::SuivantsR2(int b,int i, int j, char IndiceEtats, vector<char>DejaTraite2)
+   {
+       bool TestVide=false;
+        for(unsigned int k=0;k<premiers.size();k++)
+        {
+            for(unsigned int l=1;l<premiers[k].size();l++)
+            {
+                if(premiers[k][0]==sRecursivite[i][j+1] && premiers[k][l]=='#')
+                {
+                    TestVide=true;
+                }
+            }
+        }
+        if(TestVide==false)//Cas ou dans le first du suivant il n'y a pas de mot vide
+        {
+            for(unsigned int k=0;k<premiers.size();k++)
+            {
+                for(unsigned int l=1;l<premiers[k].size();l++)
+                {
+                    if(premiers[k][0]==sRecursivite[i][j+1])
+                    {
+                        //Verifier qu'il n'est pas deja present dans le tab suivants
+                        suivants[b].push_back(premiers[k][l]);
+                    }
+            }
+        }
+        }
+
+        else
+        {
+            //Cas ou il y a le mot vide dans le suivant, donc nous devons prendre le first de sRecursivite[i][j+1] sans le mot vide
+            //et devons prendre le follow de sRecursivite[i][0]
+        }
+
+   }
 void Langage::AffichagePremiers()
 {
     cout << endl <<"Premiers" << endl;
@@ -262,14 +335,5 @@ void Langage::AffichagePremiers()
                 cout<<" : "<<suivants[i][j];
             }
             cout<<endl;
-        }
-
-        for(unsigned int i=0; i<sRecursivite.size();i++)
-        {
-            cout<<"======Etats====="<<endl;
-
-                cout<<etats[i]<<endl;
-
-
         }
     }
