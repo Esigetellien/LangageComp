@@ -39,6 +39,9 @@ public:
     void empiler(std::string saisie);
     bool analyser();
 
+    void Creation();
+    void DeterminerNbRegles();
+
 private:
 
     int term;//nombre d'etats terminaux
@@ -60,5 +63,6 @@ private:
 }
                                                                                                                                                   ;
 std::string saisir();
+bool pocedeDollars(std::string phrase);
 
 #endif // LANGUAGE_H_INCLUDED

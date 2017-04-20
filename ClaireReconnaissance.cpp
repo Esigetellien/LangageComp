@@ -9,9 +9,25 @@ using namespace std;
 // Saisir la chaine
 string saisir()
 {
-    /// A faire
+    string phrase = "";
+
+    do
+    {
+        cout << "Ecrire la phrase a analyser :" << endl;
+        cin >> phrase;
+    }while(pocedeDollars(phrase));//phrase!=0
 
     return "rien";
+}
+
+bool pocedeDollars(string phrase)
+{
+    for(unsigned i = 0; i < phrase.size(); i++)
+    {
+        if(phrase[i] == '$')
+            return false;
+    }
+    return true;
 }
 
 // empiler la chaine

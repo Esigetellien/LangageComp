@@ -32,11 +32,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Analyse.cpp" />
+		<Unit filename="ClaireReconnaissance.cpp" />
 		<Unit filename="ClaireSRecursivite.cpp" />
 		<Unit filename="Language.cpp" />
 		<Unit filename="Language.h" />
 		<Unit filename="PremierSuivant.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="trash.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

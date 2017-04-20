@@ -72,7 +72,7 @@
 1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\clairesrecursivite.cpp
 	"Language.h"
 
-1492688698 d:\_claire2_\l3\ad\detection\langagecomp-master\language.h
+1492706256 d:\_claire2_\l3\ad\detection\langagecomp-master\language.h
 	<iostream>
 	<vector>
 	<time.h>
@@ -96,6 +96,11 @@
 1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\analyse.cpp
 	"Language.h"
 
-1492686569 source:d:\_claire2_\l3\ad\detection\langagecomp-master\clairereconnaissance.cpp
+1492706139 source:d:\_claire2_\l3\ad\detection\langagecomp-master\clairereconnaissance.cpp
+	"Language.h"
+
+1492647734 source:d:\_claire2_\l3\ad\detection\langagecomp-master\trash.cpp
+	<iostream>
+	<vector>
 	"Language.h"
 
