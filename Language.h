@@ -28,6 +28,10 @@ public:
     bool EstTerminal(char monEtat);
     void Suivants(int b, char IndiceEtats, std::vector<char>DejaTraite2);
     void AffichageSuivants();
+
+    void AnalyseInit();
+    void Analyse();
+    void affichageTableA();
     //void DeterminerNbRegles();
 private:
 
@@ -42,6 +46,7 @@ private:
     std::vector<std::vector<char> > suivants;
     std::vector<std::vector<char> > tAnalyse;
     std::vector<char> reglesAnalyse;
+    std::vector<std::vector<char> > analyse;
     //std::vector<char> nbReglesC;
     //std::vector<int> nbReglesI;
 }                                                                                                                                                    ;

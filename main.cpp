@@ -65,6 +65,7 @@ string saisieFichier()
             menu = "fichierTestFollows.txt";
             verif = true;
         }
+
         else if (menu == "0")
         {
             cout<<"\n\n\n\nDeveloppe par Duhamel Bertrand, Gouessant Claire," << endl << "              Laversanne Vincent, Zuber Thibault."<<endl;
@@ -128,6 +129,9 @@ int main()
         premier.PremiersSuivants();
         premier.AffichagePremiers();
         premier.AffichageSuivants();
+
+        premier.Analyse();
+
         system("PAUSE");
     }
 

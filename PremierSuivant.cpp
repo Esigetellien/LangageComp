@@ -151,7 +151,6 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                                     if(VidePresent == false)
                                     {
                                          DejaTraite2.push_back(sRecursivite[i][j]);
-
                                          Suivants(b,sRecursivite[i][0],DejaTraite2);
                                     }
                       }
@@ -198,6 +197,8 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                                             }
                                         if(present2==false)
                                         {
+                                            cout<<"test"<<endl;
+
                                                 suivants[b].push_back(premiers[k][l]);// On affecte la liste des premiers du caractere non terminal tab[i][j+1]
                                         }
 
@@ -224,7 +225,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
                          }
                       }
                       cout<<"\n\n ------ Test Recursivite Follows --------"<<endl;
-                                    cout<<"Etat "<<IndiceEtats;
+                                    cout<<"Etat "<<etats[b];
                                     cout<<" , Deja Traite, valeur: "<<IndiceEtats<<endl;
                                        for(unsigned int i=0;i<DejaTraite2.size(); i++)
                                         {
@@ -261,5 +262,14 @@ void Langage::AffichagePremiers()
                 cout<<" : "<<suivants[i][j];
             }
             cout<<endl;
+        }
+
+        for(unsigned int i=0; i<sRecursivite.size();i++)
+        {
+            cout<<"======Etats====="<<endl;
+
+                cout<<etats[i]<<endl;
+
+
         }
     }

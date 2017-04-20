@@ -1,6 +1,15 @@
-5
+6
 A B4|5|BC
-B 6|10
-C 2D|#
+B 6|e
+C 2CE|#
 D 1|2|B
-E 2
+E 7|8E0
+F 3FCE8
+
+A $
+B 4 follow(c) first(c)follow(D)
+B 4 follow(A)follow(E)
+C $78
+D
+E follow(c)08
+
