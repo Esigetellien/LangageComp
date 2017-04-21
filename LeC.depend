@@ -1,24 +1,27 @@
 # depslib dependency file v1.0
-1492538920 source:e:\bureau\langagecomp\clairesrecursivite.cpp
+1492765602 source:e:\bureau\langagecomp\clairesrecursivite.cpp
 	"Language.h"
 
-1492548909 e:\bureau\langagecomp\language.h
+1492765602 e:\bureau\langagecomp\language.h
 	<iostream>
 	<vector>
 	<time.h>
 	<fstream>
 	<stdlib.h>
 	<stdio.h>
+	<stack>
+	<string>
 
-1492550227 source:e:\bureau\langagecomp\language.cpp
+1492765602 source:e:\bureau\langagecomp\language.cpp
+	<iostream>
+	"Language.h"
+	<fstream>
+
+1492800399 source:e:\bureau\langagecomp\main.cpp
 	<iostream>
 	"Language.h"
 
-1492550171 source:e:\bureau\langagecomp\main.cpp
-	<iostream>
-	"Language.h"
-
-1492429776 source:e:\bureau\langagecomp\premiersuivant.cpp
+1492765602 source:e:\bureau\langagecomp\premiersuivant.cpp
 	"Language.h"
 
 1492398264 source:f:\l3_s6\langcomp\langagecomp-master\clairesrecursivite.cpp
@@ -109,6 +112,17 @@
 	"Language.h"
 
 1492555114 source:c:\users\vincent\desktop\langagecomp\langagecomp\trash.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+
+1492765602 source:e:\bureau\langagecomp\analyse.cpp
+	"Language.h"
+
+1492765602 source:e:\bureau\langagecomp\clairereconnaissance.cpp
+	"Language.h"
+
+1492765602 source:e:\bureau\langagecomp\trash.cpp
 	<iostream>
 	<vector>
 	"Language.h"

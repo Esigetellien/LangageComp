@@ -14,7 +14,13 @@ string saisieFichier()
     cout << "    2. fichierTest2.txt" << endl;
     cout << "    3. fichierTest3.txt" << endl;
     cout << "    4. fichierTest4.txt" << endl;
-    cout << "    5. Saississez votre propre fichier" << endl;
+    cout << "    5. fichierTest5.txt" << endl;
+    cout << "    6. fichierTest6.txt" << endl;
+    cout << "    7. fichierTest7.txt" << endl;
+    cout << "    8. fichierTest8.txt" << endl;
+    cout << "    9. fichierTest9.txt" << endl;
+    cout << "    10. fichierTest10.txt" << endl;
+    cout << "    11. Saississez votre propre fichier" << endl;
     cout << "    0. Quitter" << endl << endl;
 
     bool verif = false;
@@ -46,6 +52,36 @@ string saisieFichier()
         }
         else if (menu == "5")
         {
+            menu = "fichierTest5.txt";
+            verif = true;
+        }
+        else if (menu == "6")
+        {
+            menu = "fichierTest6.txt";
+            verif = true;
+        }
+        else if (menu == "7")
+        {
+            menu = "fichierTest7.txt";
+            verif = true;
+        }
+        else if (menu == "8")
+        {
+            menu = "fichierTest8.txt";
+            verif = true;
+        }
+        else if (menu == "9")
+        {
+            menu = "fichierTest9.txt";
+            verif = true;
+        }
+        else if (menu == "10")
+        {
+            menu = "fichierTest10proto.txt";
+            verif = true;
+        }
+        else if (menu == "11")
+        {
             cout << " Veuillez entrer le nom du fichier (ne pas oublier l'extension .txt)" << endl;
             cin  >> menu;
             ifstream fichier (menu.c_str(), ios::in);
@@ -60,7 +96,7 @@ string saisieFichier()
                 cout << " Erreur de saisie, le fichier specifie n'existe pas" << endl;
             }
         }
-         else if (menu == "6")
+         else if (menu == "12")
         {
             menu = "fichierTestFollows.txt";
             verif = true;
@@ -79,40 +115,6 @@ string saisieFichier()
 
 int main()
 {
-
-    /*int choix = 0;
-    do
-    {
-        system("CLS");
-        cout<<"==== Projet de Langage et Compilation ====\n"<<endl;
-        cout<<"       ==== Analyseur Ascendant ===\n"<<endl;
-
-        // Faire une saisie securisee
-        cout<<"\n\n1.Charger un fichier.txt\n2.Lancer l'analyse descendante\n3.Quitter\n\n"<<endl;
-        cout<<"Votre choix: ";
-        cin>>choix;
-        ///////////////////////////////////////////////
-        switch(choix)
-        {
-            case 1:
-            {
-            }break;
-
-            case 2:
-            {
-              system("PAUSE");
-            }break;
-
-            case 3:
-            {
-                cout<<"\n\n\n\nDeveloppé par Duhamel Bertrand, Gouessant Claire, Laversanne Vincent, Zuber Thibault"<<endl;
-            }
-            default:
-            {
-                cout<<"Erreur !!!!!"<<endl;
-            }break;
-        }*/
-
     bool verif = true;
     while (verif)
     {
@@ -136,12 +138,5 @@ int main()
 
         system("PAUSE");
     }
-
-
-    /*  //premier.Creation();
-
-
-    }while(choix != 3);
-    cout<<"\n\nDevelopper par Duhamel Bertrand, Gouessant Claire, Laversanne Vincent, Zuber Thibault"<<endl;*/
     return 0;
 }
