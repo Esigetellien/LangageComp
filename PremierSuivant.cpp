@@ -242,6 +242,7 @@ void Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme 
    {
        bool MonEtat=true;
        bool testPresent=false;
+       bool FollowDejaTraite=false;
       //Premiere Regle du follow
         if(IndiceEtats == etats[0])// Si c'est le premier etat, alors dans les follows, il possede le startSymbol
         {
@@ -251,7 +252,7 @@ void Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme 
        {
              for(unsigned int j=1;j<sRecursivite[i].size();j++)
              {
-                 if(sRecursivite[i][j]==IndiceEtats && j+1<sRecursivite[i].size()+1)
+                 if(sRecursivite[i][j]==IndiceEtats && j+1<sRecursivite[i].size())
                  {
                      MonEtat=EstTerminal(sRecursivite[i][j+1]);
                      //Cas Follow Terminal
@@ -272,9 +273,24 @@ void Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme 
                     }
                  }
 
-                if(sRecursivite[i][j]==IndiceEtats&&j+1>sRecursivite[i].size())
+                if(sRecursivite[i][j]==IndiceEtats && j+1==sRecursivite[i].size())
                 {
+                    cout<<"Test"<<endl;
                     //Cas ou on effectuera un follow de sRecurvite[i][0]
+                    for(unsigned int s=0; s<DejaTraite2.size();s++)
+                    {
+                        if(DejaTraite2[s]==sRecursivite[i][0])
+                        {
+                            FollowDejaTraite=true;
+                        }
+                    }
+                    if(FollowDejaTraite==false)
+                    {
+                        cout<<"Test"<<endl;
+                        DejaTraite2.push_back(sRecursivite[i][0]);
+                        Suivants(b, sRecursivite[i][0],DejaTraite2);
+                    }
+
                 }
 
              }

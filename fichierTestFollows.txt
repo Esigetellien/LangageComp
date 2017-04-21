@@ -6,10 +6,4 @@ D 1|2|B
 E 7|8E0
 F 3FCE8
 
-A $
-B 4 follow(c) first(c)follow(D)
-B 4 follow(A)follow(E)
-C $78
-D
-E follow(c)08
 
