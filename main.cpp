@@ -132,6 +132,8 @@ int main()
 
         premier.Analyse();
 
+        premier.reconnaissance();
+
         system("PAUSE");
     }
 

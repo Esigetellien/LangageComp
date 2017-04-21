@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stack>
+#include <string>
 
 class Langage
 {
@@ -31,15 +32,14 @@ public:
     std::vector<char> SuivantsR2(int b,int i, int j, char IndiceEtats, std::vector<char>DejaTraite2);
     bool TestSPresent(char MaValeur, char IndiceEtats);
     void AffichageSuivants();
-
     void AnalyseInit();
     void Analyse();
     void testPremiers(int i, int j, int k);
     void testSuivants(int i, int j, int k);
     void affichageTableA();
-    //void DeterminerNbRegles();
     void empiler(std::string saisie);
-    bool analyser();
+    void reconnaissance();
+    bool compiler();
 
     void Creation();
     void DeterminerNbRegles();
@@ -51,20 +51,16 @@ private:
     std::vector<bool> terminaux;
     std::vector<std::vector<char> > imports;
     std::vector<std::vector<char> > sRecursivite;
-
-    // Pas utilisés, a voir pour le bon type
     std::vector<std::vector<char> > premiers;
     std::vector<std::vector<char> > suivants;
-    //std::vector<std::vector<char> > tAnalyse;
-   // std::vector<char> reglesAnalyse;
     std::vector<std::vector<char> > analyse;
-    //std::vector<char> nbReglesC;
-    //std::vector<int> nbReglesI;
     std::stack<char> phrase;
     std::stack<char> sortie;
 }
                                                                                                                                                   ;
 std::string saisir();
 bool pocedeDollars(std::string phrase);
+void afficher(const std::stack<char>& p);
+
 
 #endif // LANGUAGE_H_INCLUDED

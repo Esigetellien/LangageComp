@@ -126,7 +126,7 @@ void Langage::Premiers(int a,char IndiceEtats,vector<char> DejaTraite)
 vector<char> Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)// Meme chose que premiers
    {
        bool MonEtat=true;
-       bool testPresent=false;
+       //bool testPresent=false;
        bool FollowDejaTraite=false;
       //Premiere Regle du follow
         if(IndiceEtats == etats[0])// Si c'est le premier etat, alors dans les follows, il possede le startSymbol
@@ -210,7 +210,7 @@ vector<char> Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)
    vector<char> Langage::SuivantsR2(int b,int i, int j, char IndiceEtats, vector<char>DejaTraite2)
    {
        bool TestVide=false;
-       bool testPresent=false;
+       //bool testPresent=false;
        bool FollowDejaTraite=false;
         for(unsigned int k=0;k<premiers.size();k++)
         {
