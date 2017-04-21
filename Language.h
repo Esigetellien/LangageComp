@@ -7,6 +7,7 @@
 #include <fstream>
 #include <stdlib.h>
 #include <stdio.h>
+#include <stack>
 
 class Langage
 {
@@ -28,6 +29,7 @@ public:
     bool EstTerminal(char monEtat);
     void Suivants(int b, char IndiceEtats, std::vector<char>DejaTraite2);
     void SuivantsR2(int b,int i, int j, char IndiceEtats, std::vector<char>DejaTraite2);
+    bool TestSPresent(char MaValeur, char IndiceEtats);
     void AffichageSuivants();
 
     void AnalyseInit();
@@ -36,6 +38,12 @@ public:
     void testSuivants(int i, int j, int k);
     void affichageTableA();
     //void DeterminerNbRegles();
+    void empiler(std::string saisie);
+    bool analyser();
+
+    void Creation();
+    void DeterminerNbRegles();
+
 private:
 
     int term;//nombre d'etats terminaux
@@ -52,7 +60,11 @@ private:
     std::vector<std::vector<char> > analyse;
     //std::vector<char> nbReglesC;
     //std::vector<int> nbReglesI;
-}                                                                                                                                                    ;
-
+    std::stack<char> phrase;
+    std::stack<char> sortie;
+}
+                                                                                                                                                  ;
+std::string saisir();
+bool pocedeDollars(std::string phrase);
 
 #endif // LANGUAGE_H_INCLUDED
