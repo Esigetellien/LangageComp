@@ -1,5 +1,5 @@
 6
-A B4|5|BC
+A B4|5|BAC
 B 6|e
 C 2CE|#
 D 1|2|B

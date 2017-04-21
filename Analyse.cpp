@@ -31,7 +31,7 @@ void Langage::AnalyseInit()
 void Langage::affichageTableA()
 {
     int affichage;
-    cout<<"===== Table d'Analyse ====\n\n"<<endl;
+    cout<<"\n\n===== Table d'Analyse ====\n\n"<<endl;
     for(unsigned int i=0;i<analyse.size();i++)
     {
         cout<<analyse[i][0]<<" | ";
@@ -50,7 +50,7 @@ void Langage::affichageTableA()
         }
         cout<<endl;
     }
-    cout<<"\n\n";
+    cout<<"\n\n---------------------------------------"<<endl;
 }
 void Langage::testPremiers(int i, int j, int k)
 {
