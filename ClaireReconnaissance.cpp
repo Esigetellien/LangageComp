@@ -7,7 +7,7 @@ using namespace std;
  2. Lire la phrase à l'aide de la table d'analyse*/
 
 // Saisir la chaine
-string saisir()
+string Langage::saisir()
 {
     string phrase = "";
 
@@ -15,18 +15,24 @@ string saisir()
     {
         cout << "Ecrire la phrase a analyser :" << endl;
         cin >> phrase;
-    }while(pocedeDollars(phrase));//vérifier phrase!=0 ?
+    }while(ctrHorsLangage(phrase));//vérifier phrase!=0 ?
 
     return phrase;
 }
 
-// La phrase ne doit pas contenir de dollars
-bool pocedeDollars(string phrase)
+// La phrase ne doit pas contenir de caractère hors langage
+bool Langage::ctrHorsLangage(string phrase)
 {
+    bool mrqr;
     for(unsigned i = 0; i < phrase.size(); i++)
     {
-        if(phrase[i] == '$')
-            return true;
+        mrqr = true;
+        for(unsigned j = 0; j < etats.size(); j++)
+        {
+            if(phrase[i] == etats[j])
+                mrqr = false;
+        }
+        if(mrqr == true) return true;
     }
     return false;
 }
@@ -94,6 +100,8 @@ bool Langage::compiler()
             phrase.pop();
             sortie.pop();
         }
+        else if(ctr_phrase == '#') phrase.pop();
+        else if(ctr_sortie == '$' && EstTerminal(ctr_phrase)) return false;
         //Sinon
         else
         {
@@ -125,14 +133,6 @@ bool Langage::compiler()
                             // Sinon échanger le caractère de sortie et la nouvelle règle
                             else
                             {
-                                /*for (unsigned int y=0; y<imports[(int)analyse[i][j]].size(); y++)
-                                {
-                                    cout << " " << imports[(int)analyse[i][j]][y];
-                                    if (y==0) cout << " -> ";
-                                    if (y==imports[(int)analyse[i][j]].size()-1)
-                                        cout << endl;
-                                }*/
-
                                 // dépiler le caractère de la sortie
                                 sortie.pop();
 

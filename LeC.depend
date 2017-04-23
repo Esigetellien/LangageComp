@@ -127,3 +127,39 @@
 	<vector>
 	"Language.h"
 
+1492949438 source:d:\_claire2_\l3\ad\debug\langagecomp-master\analyse.cpp
+	"Language.h"
+
+1492951345 d:\_claire2_\l3\ad\debug\langagecomp-master\language.h
+	<iostream>
+	<vector>
+	<time.h>
+	<fstream>
+	<stdlib.h>
+	<stdio.h>
+	<stack>
+	<string>
+
+1492952261 source:d:\_claire2_\l3\ad\debug\langagecomp-master\clairereconnaissance.cpp
+	"Language.h"
+
+1492769864 source:d:\_claire2_\l3\ad\debug\langagecomp-master\clairesrecursivite.cpp
+	"Language.h"
+
+1492769864 source:d:\_claire2_\l3\ad\debug\langagecomp-master\language.cpp
+	<iostream>
+	"Language.h"
+	<fstream>
+
+1492952262 source:d:\_claire2_\l3\ad\debug\langagecomp-master\main.cpp
+	<iostream>
+	"Language.h"
+
+1492769864 source:d:\_claire2_\l3\ad\debug\langagecomp-master\premiersuivant.cpp
+	"Language.h"
+
+1492769864 source:d:\_claire2_\l3\ad\debug\langagecomp-master\trash.cpp
+	<iostream>
+	<vector>
+	"Language.h"
+

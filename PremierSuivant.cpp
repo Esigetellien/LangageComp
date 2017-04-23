@@ -290,7 +290,7 @@ vector<char> Langage::Suivants(int b, char IndiceEtats, vector<char>DejaTraite2)
 
 void Langage::AffichagePremiers()
 {
-    cout << endl <<"Premiers" << endl;
+    cout << endl <<"\n====== Premiers =======" << endl;
     for(unsigned int i=0; i<premiers.size(); i++)
     {
 

@@ -99,7 +99,7 @@ void Langage::testSuivants(int i, int j, int k)
         {
             for (unsigned int t=1; t<suivants[h].size();t++)
             {
-                if(analyse[i][0]==suivants[h][0]&& analyse[0][j]==suivants[h][t])//Recherche du symbole dans les follows de l'etat
+                if(analyse[i][0]==suivants[h][0]&& analyse[0][j]==suivants[h][t] && analyse[i][j]==0)//Recherche du symbole dans les follows de l'etat
                 {
                     analyse[i][j]=k+1;//Attention la valeur devait etre k, mais conflit avec la fonction d'affichage pour recurperer la regle merci de mettre analyse[i][j]-1
                 }

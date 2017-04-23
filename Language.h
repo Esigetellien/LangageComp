@@ -40,9 +40,10 @@ public:
     void empiler(std::string saisie);
     void reconnaissance();
     bool compiler();
-
     void Creation();
     void DeterminerNbRegles();
+    std::string saisir();
+    bool ctrHorsLangage(std::string phrase);
 
 private:
 
@@ -58,8 +59,6 @@ private:
     std::stack<char> sortie;
 }
                                                                                                                                                   ;
-std::string saisir();
-bool pocedeDollars(std::string phrase);
 void afficher(const std::stack<char>& p);
 
 
